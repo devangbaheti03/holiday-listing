@@ -10,18 +10,33 @@ import ProfilePic from '../assets/Group 815.png'
 import DownIcon from '../assets/angle down.png'
 import '../styles/index.css'
 
+const HeaderMainContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+
+`
+
 const HeaderContainer = styled.div`
     background: transparent;
     display:  flex;
-    height: 105px;
-    width: 100%;
+    flex-direction: row;
+    height: 13vh;
+    width: 50%;
     /* border: 1px black solid; */
     align-items: center;
+    justify-content: flex-end;
 `
-const Icon = styled.img`
+const MainIcon = styled.img`
     width: 24px;
     height: 24px;
     cursor: pointer;
+`
+
+const Icon = styled.img`
+    width: 24px;
+    height: 24px;
+    cursor: pointer;  
+
 `
 
 const SettingTitle = styled.div`
@@ -47,21 +62,24 @@ const CoinsCounter = styled.div`
 `
 const Header = () => {
     return (
-        <HeaderContainer>
-            <Icon style={{ marginLeft: "45px" }} src={ArrowIcon} />
-            <Icon style={{ marginLeft: "70px" }} src={SettingsIcon} />
-            <SettingTitle style={{ fontFamily: "DM Sans", color: "#232326" }}>
-                Setting
-            </SettingTitle>
-            <Icon style={{ marginLeft: "57%", marginRight: "30px" }} src={MessagesIcon} />
-            <Icon style={{ marginRight: "30px" }} src={QuestionIcon} />
-            <Icon style={{ marginRight: "30px" }} src={FavoritesIcon} />
-            <Icon style={{ marginRight: "10px" }} src={Coins} />
-            <CoinsCounter>50000</CoinsCounter>
-            <Icon style={{ height: "8px", width: "8px", marginRight: "30px", marginLeft: "30px" }} src={DownIcon} />
-            <Icon style={{ height: "40px", width: "40px", marginRight: "30px" }} src={ProfilePic} />
-
-        </HeaderContainer>
+        <HeaderMainContainer>
+            <HeaderContainer style={{ justifyContent: "flex-start" }}>
+                <MainIcon style={{ height: "16px", width: "16px", marginLeft: "5%" }} src={ArrowIcon} />
+                <MainIcon style={{ marginLeft: "7%" }} src={SettingsIcon} />
+                <SettingTitle style={{ fontFamily: "DM Sans", color: "#232326" }}>
+                    Setting
+                </SettingTitle>
+            </HeaderContainer>
+            <HeaderContainer>
+                <Icon style={{ marginLeft: "57%", marginRight: "30px" }} src={MessagesIcon} />
+                <Icon style={{ marginRight: "30px" }} src={QuestionIcon} />
+                <Icon style={{ marginRight: "30px" }} src={FavoritesIcon} />
+                <Icon style={{ marginRight: "10px" }} src={Coins} />
+                <CoinsCounter>50000</CoinsCounter>
+                <Icon style={{ height: "8px", width: "8px", marginRight: "30px", marginLeft: "30px" }} src={DownIcon} />
+                <Icon style={{ height: "40px", width: "40px", marginRight: "59px" }} src={ProfilePic} />
+            </HeaderContainer>
+        </HeaderMainContainer>
     )
 }
 
