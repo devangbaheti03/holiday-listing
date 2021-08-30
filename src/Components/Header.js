@@ -36,11 +36,10 @@ const Icon = styled.img`
     width: 24px;
     height: 24px;
     cursor: pointer;  
-
 `
 
 const SettingTitle = styled.div`
-    margin-left: 10px;
+    margin-left: 20px;
     width: 78px;
     height: 29px;
     text-align: left;
@@ -67,7 +66,7 @@ const Header = () => {
                 <MainIcon style={{ height: "16px", width: "16px", marginLeft: "5%" }} src={ArrowIcon} />
                 <MainIcon style={{ marginLeft: "7%" }} src={SettingsIcon} />
                 <SettingTitle style={{ fontFamily: "DM Sans", color: "#232326" }}>
-                    Setting
+                    Settings
                 </SettingTitle>
             </HeaderContainer>
             <HeaderContainer>
