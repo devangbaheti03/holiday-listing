@@ -6,7 +6,7 @@ import Screen from './Components/Screen';
 
 const Artboard = styled.div`
   display: flex;
-
+  background-color:#F7F7FA;
   color: black;
   flex-direction: column;
 `

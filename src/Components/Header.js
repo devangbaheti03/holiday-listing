@@ -9,6 +9,18 @@ import Coins from '../assets/coins.png'
 import ProfilePic from '../assets/Group 815.png'
 import DownIcon from '../assets/angle down.png'
 import '../styles/index.css'
+import { Popover } from 'antd'
+import 'antd/dist/antd.css';
+import { EditOutlined, LogoutOutlined } from '@ant-design/icons'
+
+
+const text = <div style={{ cursor: "pointer", marginTop: "10px" }}>Admin Access</div>;
+const content = (
+    <div>
+        <p style={{ cursor: "pointer" }}><EditOutlined />  Edit Profile</p>
+        <p style={{ cursor: "pointer" }}><LogoutOutlined />  Logout</p>
+    </div>
+);
 
 const HeaderMainContainer = styled.div`
     display: flex;
@@ -70,13 +82,16 @@ const Header = () => {
                 </SettingTitle>
             </HeaderContainer>
             <HeaderContainer>
-                <Icon style={{ marginLeft: "57%", marginRight: "30px" }} src={MessagesIcon} />
-                <Icon style={{ marginRight: "30px" }} src={QuestionIcon} />
-                <Icon style={{ marginRight: "30px" }} src={FavoritesIcon} />
+                <Icon onClick={() => alert('No Messages')} style={{ marginLeft: "57%", marginRight: "30px" }} src={MessagesIcon} />
+                <Icon onClick={() => alert('No Questions')} style={{ marginRight: "30px" }} src={QuestionIcon} />
+                <Icon onClick={() => alert('No Favorites')} style={{ marginRight: "30px" }} src={FavoritesIcon} />
                 <Icon style={{ marginRight: "10px" }} src={Coins} />
                 <CoinsCounter>50000</CoinsCounter>
                 <Icon style={{ height: "8px", width: "8px", marginRight: "30px", marginLeft: "30px" }} src={DownIcon} />
-                <Icon style={{ height: "40px", width: "40px", marginRight: "59px" }} src={ProfilePic} />
+                <Popover placement="bottomRight" title={text} content={content} trigger="click">
+                    <Icon style={{ height: "40px", width: "40px", marginRight: "59px" }} src={ProfilePic} />
+                </Popover>
+
             </HeaderContainer>
         </HeaderMainContainer>
     )
