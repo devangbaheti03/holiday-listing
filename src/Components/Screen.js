@@ -5,6 +5,7 @@ import { Select } from 'antd';
 import 'antd/dist/antd.css';
 import YearIcon from '../assets/Group 856.png'
 import PopupModal from './PopupModal';
+import { EditOutlined, DeleteOutlined } from '@ant-design/icons'
 
 const { Option } = Select;
 
@@ -18,6 +19,7 @@ const ScreenContainer = styled.div`
     margin-bottom: 3vh;
     border-radius: 10px;
     box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.2);
+    scroll-behavior: smooth;
 `
 
 const ScreenNav = styled.div`
@@ -99,6 +101,12 @@ const TextDiv = styled.div`
     cursor: pointer;
 `
 
+const ListDiv = styled.div`
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;   
+`
 const Screen = () => {
     return (
         <ScreenContainer>
@@ -128,12 +136,12 @@ const Screen = () => {
                     </YearDiv>
                 </RowDiv>
                 <RowDiv>
-                    <h5 style={{ color: "#90919B", letterSpacing: "0px" }}>
+                    <h5 style={{ width: "50%", color: "#90919B", letterSpacing: "0px" }}>
                         Assign the holidays that you want to give to your employee for the year
                     </h5>
                 </RowDiv>
                 <RowDiv style={{ marginTop: "24px" }}>
-                    <TextDiv style={{ color: "#232326" }}>List</TextDiv>
+                    <TextDiv style={{ color: "#232326", fontSize: "18px" }}>List</TextDiv>
                     <OptionsDiv>
                         <PopupModal />
                         <TextDiv style={{ color: "#90919B", marginLeft: "20px" }}>
@@ -148,6 +156,52 @@ const Screen = () => {
                         </Select>
                     </OptionsDiv>
                 </RowDiv>
+                <ListDiv>
+                    <TextDiv style={{ color: "#BBBBBF", fontSize: "14px" }}>Name</TextDiv>
+                    <TextDiv style={{ marginLeft: "15%", color: "#BBBBBF", fontSize: "14px" }}>Type</TextDiv>
+                    <TextDiv style={{ marginLeft: "50%", color: "#BBBBBF", fontSize: "14px" }}>Date</TextDiv>
+                </ListDiv>
+                <ListDiv style={{ borderTop: "1px solid #DFDFDF" }}>
+                    <TextDiv style={{ color: "#151B30", fontSize: "14px" }}>Rath Yatra</TextDiv>
+                    <TextDiv style={{ marginLeft: "12%", color: "#585A64", fontSize: "14px" }}>Optional</TextDiv>
+                    <TextDiv style={{ marginLeft: "48%", color: "#151B30", fontSize: "14px" }}>12 July, 2021</TextDiv>
+                    <EditOutlined style={{ marginLeft: "10%", color: "#ADAFB7", width: "20px", height: "20px" }} />
+                    <DeleteOutlined style={{ marginLeft: "5%", color: "#ADAFB7", width: "20px", height: "20px" }} />
+                </ListDiv>
+                <ListDiv style={{ borderTop: "1px solid #DFDFDF" }}>
+                    <TextDiv style={{ color: "#151B30", fontSize: "14px" }}>Rath Yatra</TextDiv>
+                    <TextDiv style={{ marginLeft: "12%", color: "#585A64", fontSize: "14px" }}>Optional</TextDiv>
+                    <TextDiv style={{ marginLeft: "48%", color: "#151B30", fontSize: "14px" }}>12 July, 2021</TextDiv>
+                    <EditOutlined style={{ marginLeft: "10%", color: "#ADAFB7", width: "20px", height: "20px" }} />
+                    <DeleteOutlined style={{ marginLeft: "5%", color: "#ADAFB7", width: "20px", height: "20px" }} />
+                </ListDiv>
+                <ListDiv style={{ borderTop: "1px solid #DFDFDF" }}>
+                    <TextDiv style={{ color: "#151B30", fontSize: "14px" }}>Rath Yatra</TextDiv>
+                    <TextDiv style={{ marginLeft: "12%", color: "#585A64", fontSize: "14px" }}>Optional</TextDiv>
+                    <TextDiv style={{ marginLeft: "48%", color: "#151B30", fontSize: "14px" }}>12 July, 2021</TextDiv>
+                    <EditOutlined style={{ marginLeft: "10%", color: "#ADAFB7", width: "20px", height: "20px" }} />
+                    <DeleteOutlined style={{ marginLeft: "5%", color: "#ADAFB7", width: "20px", height: "20px" }} />
+                </ListDiv>                <ListDiv style={{ borderTop: "1px solid #DFDFDF" }}>
+                    <TextDiv style={{ color: "#151B30", fontSize: "14px" }}>Rath Yatra</TextDiv>
+                    <TextDiv style={{ marginLeft: "12%", color: "#585A64", fontSize: "14px" }}>Optional</TextDiv>
+                    <TextDiv style={{ marginLeft: "48%", color: "#151B30", fontSize: "14px" }}>12 July, 2021</TextDiv>
+                    <EditOutlined style={{ marginLeft: "10%", color: "#ADAFB7", width: "20px", height: "20px" }} />
+                    <DeleteOutlined style={{ marginLeft: "5%", color: "#ADAFB7", width: "20px", height: "20px" }} />
+                </ListDiv>
+                <ListDiv style={{ borderTop: "1px solid #DFDFDF" }}>
+                    <TextDiv style={{ color: "#151B30", fontSize: "14px" }}>Rath Yatra</TextDiv>
+                    <TextDiv style={{ marginLeft: "12%", color: "#585A64", fontSize: "14px" }}>Optional</TextDiv>
+                    <TextDiv style={{ marginLeft: "48%", color: "#151B30", fontSize: "14px" }}>12 July, 2021</TextDiv>
+                    <EditOutlined style={{ marginLeft: "10%", color: "#ADAFB7", width: "20px", height: "20px" }} />
+                    <DeleteOutlined style={{ marginLeft: "5%", color: "#ADAFB7", width: "20px", height: "20px" }} />
+                </ListDiv>
+                <ListDiv style={{ borderTop: "1px solid #DFDFDF" }}>
+                    <TextDiv style={{ color: "#151B30", fontSize: "14px" }}>Rath Yatra</TextDiv>
+                    <TextDiv style={{ marginLeft: "12%", color: "#585A64", fontSize: "14px" }}>Optional</TextDiv>
+                    <TextDiv style={{ marginLeft: "48%", color: "#151B30", fontSize: "14px" }}>12 July, 2021</TextDiv>
+                    <EditOutlined style={{ marginLeft: "10%", color: "#ADAFB7", width: "20px", height: "20px" }} />
+                    <DeleteOutlined style={{ marginLeft: "5%", color: "#ADAFB7", width: "20px", height: "20px" }} />
+                </ListDiv>
 
             </HolidayPanel>
         </ScreenContainer>

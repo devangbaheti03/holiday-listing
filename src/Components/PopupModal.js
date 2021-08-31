@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import { Modal, Button } from 'antd';
 import styled from 'styled-components';
@@ -52,8 +51,7 @@ const PopupModal = () => {
                     </Button>
                 ]}
             >
-                <br></br>
-                <h5>Name</h5>
+
             </Modal>
         </>
     )

@@ -19,7 +19,7 @@ const IconContainer = styled.div`
     display:  flex;
     flex-direction: row;
     align-items: center;
-    height: 62px;
+    height: 8vh;
     width: 95%;
     border-left: ${props => props.selected ? "solid black 5px" : "solid transparent 5px"};
     cursor: pointer;
@@ -27,8 +27,8 @@ const IconContainer = styled.div`
 `
 const Icon = styled.img`
     margin-left: 30%;
-    width: 24px;
-    height: 24px;
+    width: 20%;
+    height: 30%;
     opacity:1;
 `
 const Drawer = () => {
